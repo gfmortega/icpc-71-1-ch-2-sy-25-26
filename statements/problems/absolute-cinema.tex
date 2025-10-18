@@ -11,15 +11,17 @@
 
 \problem{Absolute Cinema}
 
-For Bob's art class, he was tasked with making art of a mountain range---but, it must be done in a creative way, and the more creative the better.  Alice suggests that he could model the mountain range using mathematics!
+For Bob's art class, he was tasked with making art of a mountain range---but, it must be done in a creative way, and the more creative the better.  Alice suggests that he could model the mountain range using mathematics.
+
+What a nerd!
 
 Given a sequence $a_1, a_2, a_3, \dots, a_n$ of non-negative \textbf{even} integers, let
 \begin{align*}
     A(x) &= \min\left(|x - a_1|,~|x - a_2|,~|x - a_3|, \dots, ~|x - a_n|\right).
 \end{align*}
-Alice says that this function $A(x)$ resembles a mountain range when its graph is plotted using a graphing calculator!
+Alice says that this function $A(x)$ resembles a mountain range when its graph is plotted using a graphing calculator.
 
-For example, if $a = [6, 2, 8, 2]$, then the graph of $$
+For example, if $a = [6, 2, 8, 2]$ and $r=12$, then the graph of $$
     A(x) = \min(|x-6|,~|x-2|,~|x-8|,~|x-2|)
 $$ would be the one illustrated below.
 \begin{center}
@@ -32,7 +34,9 @@ For example, if $a = [3, 1, 4, 1]$ and $r=6$, then the Bob would want to paint g
 \begin{center}
     \includegraphics[width=0.75\linewidth]{img/absolute-1e.png}
 \end{center}
-Its total area can be shown to be \texttt{15} exactly.  In fact, Bob is able to show that if the $a_i$ are all even, then the area of the desired region is \textbf{guaranteed} to be an integer!
+Its total area can be shown to be \texttt{15} exactly.
+
+In fact, Bob is able to show that if the $a_i$ are all even, and $r$ is also even, then the area of the desired region is \textbf{guaranteed} to be an integer!
 
 Given all these values, please determine the total \textit{area} of this region, so that Bob knows how much paint to buy.  It's \textit{integral} that he knows this information, \textit{definitely}!
 
@@ -40,13 +44,13 @@ Given all these values, please determine the total \textit{area} of this region,
 
 \subsection*{Input Format}
 
-Input begins with a single line containing the space-separated integers $n$ and $r$.
+Input begins with a single line containing the space-separated positive integers $n$ and $r$, where $r$ is even.
 
-The second line of input contains the $n$ space-separated integers $a_1, a_2, a_3, \dots, a_n$.
+The second line of input contains the $n$ space-separated even positive integers $a_1, a_2, a_3, \dots, a_n$.
 
 \subsection*{Output Format}
 
-Output a line containing a single real number, the area of the desired region (rounded to exactly two decimal places).
+Output a line containing a single \textbf{integer}, the area of the desired region.
 
 \subsection*{Constraints}
 
@@ -55,7 +59,8 @@ Output a line containing a single real number, the area of the desired region (r
 % Set to (10^5, 10^9) in true bounds
 \constraints{
     $1 \leq n \leq 100$ \\
-    $1 \leq r \leq 1000$ \\
+    $2 \leq r \leq 1000$ and $r$ is even \\
+    $2 \leq a_i \leq 1000$ and $a_i$ is even, for each $i$ \\
 }
 
 \textit{There is no need to validate in your program that these constraints hold.}
@@ -64,23 +69,23 @@ Output a line containing a single real number, the area of the desired region (r
 
 \begin{sampleIO}
 \begin{verbatim}
-4 6
-3 1 4 1
+4 12
+6 2 8 2
 \end{verbatim}
 &
 \begin{verbatim}
-3.75
+15
 \end{verbatim}
 \end{sampleIO}
 
 \begin{sampleIO}
 \begin{verbatim}
 1 2
-1
+2
 \end{verbatim}
 &
 \begin{verbatim}
-1.00
+2
 \end{verbatim}
 \end{sampleIO}
 

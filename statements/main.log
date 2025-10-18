@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.6.17)  17 OCT 2025 21:34
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.6.17)  19 OCT 2025 01:50
  system commands enabled.
 **main.tex
 (./main.tex
@@ -1565,7 +1565,7 @@ LaTeX Warning: No \author given.
 
 (./preface/base.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}</tmp/lua_Sq2a1G>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}</tmp/lua_Q7ONtv>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
 2.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -1597,95 +1597,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
 ) [2
 
-</tmp/lua_aGm7VC>] (./problems/absolute-cinema.tex
-
-LaTeX Warning: File `img/absolute-0e.png' not found on input line 26.
-
-
-! Package luatex.def Error: File `img/absolute-0e.png' not found: using draft s
-etting.
-
-See the luatex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 ...s[width=0.75\linewidth]{img/absolute-0e.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `img/absolute-1e.png' not found on input line 33.
-
-
-! Package luatex.def Error: File `img/absolute-1e.png' not found: using draft s
-etting.
-
-See the luatex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 ...s[width=0.75\linewidth]{img/absolute-1e.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+</tmp/lua_4troHP>] (./problems/absolute-cinema.tex
+<img/absolute-0e.png, id=66, 1172.38pt x 422.57875pt>
+File: img/absolute-0e.png Graphic file (type png)
+<use img/absolute-0e.png>
+Package luatex.def Info: img/absolute-0e.png  used on input line 28.
+(luatex.def)             Requested size: 313.69025pt x 113.0661pt.
+<img/absolute-1e.png, id=67, 1172.38pt x 422.57875pt>
+File: img/absolute-1e.png Graphic file (type png)
+<use img/absolute-1e.png>
+Package luatex.def Info: img/absolute-1e.png  used on input line 35.
+(luatex.def)             Requested size: 313.69025pt x 113.0661pt.
 [3
 
-] [4]) [5] (./problems/kabayos.tex
-<img/hagdang-bato.png, id=86, 698.61pt x 638.385pt>
+<./img/absolute-0e.png><./img/absolute-1e.png>]
+Overfull \hbox (24.17984pt too wide) in paragraph at lines 49--50
+[]\T1/lmr/m/n/10.95 The sec-ond line of in-put con-tains the $\OML/cmm/m/it/10.
+95 n$ \T1/lmr/m/n/10.95 space-separated even pos-i-tive in-te-gers $\OML/cmm/m/
+it/10.95 a[]; a[]; a[]; [] ; a[]$\T1/lmr/m/n/10.95 . 
+ []
+
+) [4] (./problems/kabayos.tex
+<img/hagdang-bato.png, id=87, 698.61pt x 638.385pt>
 File: img/hagdang-bato.png Graphic file (type png)
 <use img/hagdang-bato.png>
 Package luatex.def Info: img/hagdang-bato.png  used on input line 14.
 (luatex.def)             Requested size: 167.2989pt x 152.87459pt.
-[6
+[5
 
-<./img/hagdang-bato.png>]) [7] (./problems/light-game.tex
-<img/light-game.png, id=97, 317.185pt x 280.04625pt>
+<./img/hagdang-bato.png>]) [6] (./problems/light-game.tex
+<img/light-game.png, id=98, 317.185pt x 280.04625pt>
 File: img/light-game.png Graphic file (type png)
 <use img/light-game.png>
 Package luatex.def Info: img/light-game.png  used on input line 28.
 (luatex.def)             Requested size: 125.47737pt x 110.78583pt.
-[8
+[7
 
 <./img/light-game.png>]
-<img/light-press.png, id=103, 1291.82625pt x 641.39626pt>
+<img/light-press.png, id=104, 1291.82625pt x 641.39626pt>
 File: img/light-press.png Graphic file (type png)
 <use img/light-press.png>
 Package luatex.def Info: img/light-press.png  used on input line 51.
 (luatex.def)             Requested size: 355.51817pt x 176.51663pt.
-[9<./img/light-press.png>]) [10] (./problems/love-game.tex [11
+[8<./img/light-press.png>]) [9] (./problems/love-game.tex [10
 
-]) [12] (./problems/mixed-messages.tex
-<img/keypad.png, id=123, 1284.8pt x 1040.88875pt>
+]) [11] (./problems/mixed-messages.tex
+<img/keypad.png, id=124, 1284.8pt x 1040.88875pt>
 File: img/keypad.png Graphic file (type png)
 <use img/keypad.png>
 Package luatex.def Info: img/keypad.png  used on input line 19.
 (luatex.def)             Requested size: 104.56342pt x 84.70224pt.
-[13
+[12
 
-<./img/keypad.png>]) [14] (./problems/six-seven.tex [15
+<./img/keypad.png>]) [13] (./problems/six-seven.tex [14
 
-] [16]) [17] (./problems/tetris.tex
-<img/tetris.png, id=145, 667.49374pt x 123.46124pt>
+] [15]) [16] (./problems/tetris.tex
+<img/tetris.png, id=146, 667.49374pt x 123.46124pt>
 File: img/tetris.png Graphic file (type png)
 <use img/tetris.png>
 Package luatex.def Info: img/tetris.png  used on input line 15.
 (luatex.def)             Requested size: 313.69025pt x 58.02112pt.
-<img/tetris-bag.png, id=146, 1336.995pt x 195.73125pt>
+<img/tetris-bag.png, id=147, 1336.995pt x 195.73125pt>
 File: img/tetris-bag.png Graphic file (type png)
 <use img/tetris-bag.png>
 Package luatex.def Info: img/tetris-bag.png  used on input line 31.
 (luatex.def)             Requested size: 397.3397pt x 58.1673pt.
-[18
+[17
 
-<./img/tetris.png><./img/tetris-bag.png>]) [19] (./problems/the-parlor.tex
-<img/parlor-boxes.png, id=157, 1155.31625pt x 292.09125pt>
+<./img/tetris.png><./img/tetris-bag.png>]) [18] (./problems/the-parlor.tex
+<img/parlor-boxes.png, id=158, 1155.31625pt x 292.09125pt>
 File: img/parlor-boxes.png Graphic file (type png)
 <use img/parlor-boxes.png>
 Package luatex.def Info: img/parlor-boxes.png  used on input line 17.
 (luatex.def)             Requested size: 292.77629pt x 74.01653pt.
-<img/parlor-notes.png, id=158, 470.75874pt x 519.9425pt>
+<img/parlor-notes.png, id=159, 470.75874pt x 519.9425pt>
 File: img/parlor-notes.png Graphic file (type png)
 <use img/parlor-notes.png>
 Package luatex.def Info: img/parlor-notes.png  used on input line 24.
@@ -1702,28 +1687,28 @@ Overfull \hbox (46.02505pt too wide) in paragraph at lines 32--33
 true' | 'false'>. 
  []
 
-[20
+[19
 
-<./img/parlor-boxes.png><./img/parlor-notes.png>] [21]) [22] (./problems/the-ra
+<./img/parlor-boxes.png><./img/parlor-notes.png>] [20]) [21] (./problems/the-ra
 inbow-connection.tex
-<img/rainbow-b.png, id=174, 859.21pt x 323.2075pt>
+<img/rainbow-b.png, id=175, 859.21pt x 323.2075pt>
 File: img/rainbow-b.png Graphic file (type png)
 <use img/rainbow-b.png>
 Package luatex.def Info: img/rainbow-b.png  used on input line 17.
 (luatex.def)             Requested size: 271.86234pt x 102.26462pt.
-<img/rainbow-1-b.png, id=175, 859.21pt x 323.2075pt>
+<img/rainbow-1-b.png, id=176, 859.21pt x 323.2075pt>
 File: img/rainbow-1-b.png Graphic file (type png)
 <use img/rainbow-1-b.png>
 Package luatex.def Info: img/rainbow-1-b.png  used on input line 23.
 (luatex.def)             Requested size: 271.86234pt x 102.26462pt.
-<img/rainbow-2-b.png, id=176, 859.21pt x 323.2075pt>
+<img/rainbow-2-b.png, id=177, 859.21pt x 323.2075pt>
 File: img/rainbow-2-b.png Graphic file (type png)
 <use img/rainbow-2-b.png>
 Package luatex.def Info: img/rainbow-2-b.png  used on input line 29.
 (luatex.def)             Requested size: 271.86234pt x 102.26462pt.
-[23
+[22
 
-<./img/rainbow-b.png><./img/rainbow-1-b.png><./img/rainbow-2-b.png>]) [24] (./m
+<./img/rainbow-b.png><./img/rainbow-1-b.png><./img/rainbow-2-b.png>]) [23] (./m
 ain.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1734,13 +1719,14 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 44539 strings out of 476553
+ 44490 strings out of 476553
  125086,1977958 words of node,token memory allocated
  824 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 11 attribute, 113 glue_spe
 c, 11 attribute_list, 3 write nodes
-   avail lists: 1:4,2:1259,3:316,4:344,5:368,6:90,7:4883,8:39,9:862,10:15,11:322
- 65358 multiletter control sequences out of 65536+600000
+   avail lists: 1:4,2:1883,3:438,4:588,5:375,6:126,7:4883,8:39,9:1264,10:15,11:3
+22
+ 65310 multiletter control sequences out of 65536+600000
  98 fonts using 10593295 bytes
  114i,22n,110p,1192b,1031s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvip
@@ -1758,10 +1744,10 @@ xmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (24 pages, 2581230 bytes).
+Output written on main.pdf (23 pages, 2621507 bytes).
 
 PDF statistics: 262 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 131072)
+ 181 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

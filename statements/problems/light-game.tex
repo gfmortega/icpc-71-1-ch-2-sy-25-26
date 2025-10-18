@@ -34,13 +34,13 @@ Each light is also a button that you can press.  When you press a light, the sta
 Alice has a keen eye though, and deduced that the lights' behavior follows these consistent (if peculiar) rules:
 \begin{itemize}
 \item If you press a light where both its neighbors are off,
-\newline both its neighbors are turned on
+\newline both its neighbors become on
 \item If you press a light where both its neighbors are on,
-\newline its state is flipped \textit{and} both its neighbors are turned off.
+\newline its state becomes flipped \textit{and} both its neighbors become off.
 \item If the pressed light has the same state as its left neighbor but not its right,
-\newline the states of its two neighbors are \textit{both} flipped.
+\newline the states of its two neighbors \textit{both} become flipped.
 \item If the pressed light has the same state as its right neighbor but not its left,
-\newline the state of the pressed light changes to be the same as its \textit{left} neighbor.
+\newline the state of the pressed light changes to become the same as its \textit{left} neighbor.
 \end{itemize}
 Here, ``flipping a state'' means: off lights become on, and on lights become off.
 

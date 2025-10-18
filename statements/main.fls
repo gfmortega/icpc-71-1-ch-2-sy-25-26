@@ -1,4 +1,4 @@
-PWD /home/cisco/Desktop/problem-setting/icpc-71-1-ch2/statements
+PWD /home/cisco/Desktop/problem-setting/icpc-71-1-ch-2-sy-25-26/statements
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
 INPUT ./main.tex
 OUTPUT main.log
@@ -303,8 +303,8 @@ OUTPUT main.out
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/tex/latex/lm/t1lmss.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm
-OUTPUT /tmp/lua_Sq2a1G
-INPUT /tmp/lua_Sq2a1G
+OUTPUT /tmp/lua_Q7ONtv
+INPUT /tmp/lua_Q7ONtv
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /home/cisco/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc
 INPUT /home/cisco/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
@@ -344,13 +344,17 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr10.tfm
-OUTPUT /tmp/lua_aGm7VC
-INPUT /tmp/lua_aGm7VC
+OUTPUT /tmp/lua_4troHP
+INPUT /tmp/lua_4troHP
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss12.tfm
 INPUT ./problems/absolute-cinema.tex
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT ./img/absolute-0e.png
+INPUT ./img/absolute-0e.png
+INPUT ./img/absolute-1e.png
+INPUT ./img/absolute-1e.png
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm

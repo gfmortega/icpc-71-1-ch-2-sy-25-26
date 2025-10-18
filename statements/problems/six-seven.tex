@@ -57,6 +57,8 @@ Given a positive integer $n$, your goal is to construct any arithmetic expressio
 \begin{itemize}
     \item If the expression contains more than $1000$ characters (including spaces), \newline the computer blows up.
     \item If at any intermediate step an integer with a value greater than $2^{64}$ is produced, \newline the computer blows up.
+    \item For \texttt{+} and \texttt{*}, leading zeros are removed at each intermediate step, e.g. \texttt{0 + 0} and \texttt{0 * 5} both evaluate to \texttt{0}
+    \item Finally, \texttt{n * 0} causes the computer to blow up, regardless of the left operand.
 \end{itemize}
 
 \subsection*{Input Format}
@@ -87,18 +89,20 @@ Here are some more examples of valid expressions:
     
     \texttt{(6 + 7 * 6)}
 
+    \texttt{(6 / 6) * (7)}
+
     \texttt{(((((((6)))))))}
 
     \texttt{7}
 \end{center}
-These evaluate to \texttt{17} and \texttt{777783} and \texttt{6} and \texttt{7}, respectively.
+These evaluate to \texttt{17} and \texttt{6777777} and \texttt{1111111} and \texttt{6} and \texttt{7}, respectively.
 
 \subsection*{Constraints}
 
 \textit{Your program will only be tested on data that satisfies the following constraints.}
 
 \constraints{
-    $1 \leq n \leq 10^{18}$ \\
+    $1 \leq n \leq 10^{12}$ \\
 }
 
 \textit{There is no need to validate in your program that these constraints hold.}
@@ -109,56 +113,91 @@ These evaluate to \texttt{17} and \texttt{777783} and \texttt{6} and \texttt{7},
 
 \begin{sampleIO}
 \begin{verbatim}
-2025
+16
 \end{verbatim}
 &
 \begin{verbatim}
-(67 - 7)/3 + 5*5
+7 - 6 + 6
 \end{verbatim}
 \end{sampleIO}
 
 \begin{sampleIO}
 \begin{verbatim}
-69
+67
 \end{verbatim}
 &
 \begin{verbatim}
-(23+7 - 7 - 2)/3 - 7
+(7+7) - (6+7 - 7)/6
 \end{verbatim}
 \end{sampleIO}
 
 
-% \begin{sampleIO}
-% \begin{verbatim}
-% 2357
-% \end{verbatim}
-% &
-% \begin{verbatim}
-% 2 + 3 + 5 + 7
-% \end{verbatim}
-% \end{sampleIO}
+\begin{sampleIO}
+\begin{verbatim}
+143
+\end{verbatim}
+&
+\begin{verbatim}
+6*6 / (6 + (6 + 6)) / 7
+\end{verbatim}
+\end{sampleIO}
 
 
-% \begin{sampleIO}
-% \begin{verbatim}
-% 911
-% \end{verbatim}
-% &
-% \begin{verbatim}
-% (13*7) + (3 - 2)
-% \end{verbatim}
-% \end{sampleIO}
+\begin{sampleIO}
+\begin{verbatim}
+17
+\end{verbatim}
+&
+\begin{verbatim}
+(7) - ((6)) + (((7)))
+\end{verbatim}
+\end{sampleIO}
 
 
-% \begin{sampleIO}
-% \begin{verbatim}
-% 666
-% \end{verbatim}
-% &
-% \begin{verbatim}
-% ((17 - 7) / 5 + 2)*3 + 2*3
-% \end{verbatim}
-% \end{sampleIO}
+\begin{sampleIO}
+\begin{verbatim}
+67777777
+\end{verbatim}
+&
+\begin{verbatim}
+(6 + 7 * 6)
+\end{verbatim}
+\end{sampleIO}
+
+
+\begin{sampleIO}
+\begin{verbatim}
+1111111
+\end{verbatim}
+&
+\begin{verbatim}
+(6 / 6) * (7)
+\end{verbatim}
+\end{sampleIO}
+
+
+
+\begin{sampleIO}
+\begin{verbatim}
+6
+\end{verbatim}
+&
+\begin{verbatim}
+(((((((6)))))))
+\end{verbatim}
+\end{sampleIO}
+
+
+
+\begin{sampleIO}
+\begin{verbatim}
+7
+\end{verbatim}
+&
+\begin{verbatim}
+7
+\end{verbatim}
+\end{sampleIO}
 
 
 
