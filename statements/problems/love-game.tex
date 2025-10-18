@@ -1,0 +1,84 @@
+% Slug: four-of-diamonds
+% Description: ?
+% Author: Cisco
+% Story: Cisco
+% Test Data: Cisco
+% Testers: ?
+% Editorial: ?
+% TempSlug: four-of-diamonds
+
+% Please don't modify or delete TempSlug
+
+\problem{Love Game}
+\textit{Says Luna} (translated as \textit{Ani Buwan}) is a video game under the genre of \textit{dating simulator}.  You play the role of a young man who has inherited his grandfather's old farm, tasked with both adapting to rural life and forming bonds with your new community.
+
+People in the community have an \textit{affection rating} for you, represented as some integer, possibly zero or negative (where negative affection corresponds to disdain).  Affection ratings are modified by giving these characters gifts.
+
+Cindy is playing the game, and wants to reach an affection rating of $t$ or more with her favorite \textit{husbando}.  This husbando initially has an affection rating of $s$.  
+
+However, at this stage of the game, Alice only has access to one kind of item, the \textit{Square Seed}.  If she gives one Square Seed to her husbando, it has the following effect on his affection rating:
+\begin{itemize}
+    \item If his affection rating is currently $x$, then after receiving one Square Seed, \newline it becomes $x^2 - 3$.
+\end{itemize}
+So for example, if $s=-4$, then after giving the husbando one Square Seed, his affection rating becomes $13$.  After giving him another Square Seed, his affection rating then becomes $166$.
+
+Given $s$ and $t$, determine the minimum number of Square Seeds Alice must give her husbando in order for his affection rating to become $\geq t$.  If this is a fool's errand though (i.e. impossible no matter how many square seeds you give him), please tell Alice.
+
+\subsection*{Input Format}
+
+Input consists of a single line containing the two space-separated integers $s$ and $t$.
+
+\subsection*{Output Format}
+
+If the task is impossible even if Alice had all the Square Seeds in the world, output the words \texttt{MOVE ON}
+
+Otherwise, output a single non-negative integer, the minimum number of Square Seeds that Alice needs to give her husbando.
+
+\subsection*{Constraints}
+
+\textit{Your program will only be tested on data that satisfies the following constraints.}
+
+\constraints{
+    $-10^9 \leq s, t \leq 10^9$ \\
+}
+
+\textit{There is no need to validate in your program that these constraints hold.}
+
+\subsection*{Sample I/O}
+
+\begin{sampleIO}
+\begin{verbatim}
+-4 100
+\end{verbatim}
+&
+\begin{verbatim}
+2
+\end{verbatim}
+\end{sampleIO}
+
+\begin{sampleIO}
+\begin{verbatim}
+-99 -100
+\end{verbatim}
+&
+\begin{verbatim}
+0
+\end{verbatim}
+\end{sampleIO}
+
+\begin{sampleIO}
+\begin{verbatim}
+0 1000
+\end{verbatim}
+&
+\begin{verbatim}
+4
+\end{verbatim}
+\end{sampleIO}
+
+
+
+% \subsection*{Explanation}
+% In the first sample input, the sequence already has the desired property.  The first \texttt{T} was the last tetromino of the previous bag.  Then, the next bag had the tetrominos in the order \texttt{OIJSZLT}.  Finally, the last \texttt{T} was the first tetromino of the next bag.
+
+% In the second sample input, we can make the sequence have the desired property by, for example, changing the last two letters to \texttt{I} and \texttt{O}.

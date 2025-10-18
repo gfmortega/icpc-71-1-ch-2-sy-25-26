@@ -1,0 +1,574 @@
+\ProvidesPackage{problemstatements}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% import packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % inputenc should be first?
+% \RequirePackage[utf8]{inputenc} % Accept different input encodings. encoding of latex sources. ignored in LuaLaTeX?
+
+\RequirePackage{amsmath} % AMS mathematical facilities for LaTeX. lots of nice math stuff
+\RequirePackage{amssymb} % mathbb
+\RequirePackage{amsthm} % Typesetting theorems (AMS style). custom theorems
+\RequirePackage{graphicx} % Enhanced support for graphics. stuff for includegraphics
+% \RequirePackage{booktabs}
+% \RequirePackage{fullpage} % Set all page margins to 1.5cm. sets all 4 margins to be either 1 inch or 1.5 cm, and specifies the page style
+\RequirePackage{siunitx} % A comprehensive (SI) units package. I use mainly \num[group-separator{,}] to separate thousands places by commas
+\RequirePackage{fancyhdr} % Extensive control of page headers and footers in LaTeX2ε. more control over headers. (\head, \foot, etc.)
+\RequirePackage{minted} % Highlighted source code for LaTeX. syntax highlighting with \minted environment
+\RequirePackage[hyphens]{url} % Verbatim with URL-sensitive line breaks. for \url
+\RequirePackage{color} % Colour control for LaTeX documents. for \color
+\RequirePackage[table, svgnames, dvipsnames]{xcolor} % Driver-independent color extensions for LaTeX and pdfLaTeX. color mixing, e.g., red!80!white
+\RequirePackage{colortbl} % Add colour to LaTeX tables. coloring table cells and stuff
+\RequirePackage{textcomp} % LaTeX support for the Text Companion fonts. some symbols
+\RequirePackage{listings} % Typeset source code listings using LaTeX. \lstlistings
+\RequirePackage{array} % Extending the array and tabular environments. improved {array} and {tabular}
+\RequirePackage{setspace} % Set space between lines. \singlespacing, \onehalfspacing
+\RequirePackage{wrapfig} % Produces figures which text can flow around. \begin{wrapfigure} (text can wrap around the figure)
+\RequirePackage{parskip} % Layout with zero \parindent, non-zero \parskip. spaced paragraph instead of indent
+\RequirePackage{accents} % Multiple mathematical accents
+\RequirePackage{gensymb} % Generic symbols for both text and math mode. E.g., \celsius
+% \RequirePackage{indentfirst} % indent first paragraph after header
+\RequirePackage{mdframed} % Framed environments that can split at page boundaries. mdframed environment (can deal with pagebreaks in framed text)
+\RequirePackage{verbatim} % Reimplementation of and extensions to LaTeX verbatim. updated {verbatim} and also {comment}
+% \RequirePackage{xspace} % add to end of new commands as \xspace to add space after it instead of adding {}. this guesses at stuff. not recommended these days?
+\RequirePackage{calc} % Simple arithmetic in LaTeX commands. allows arithmetic for measurements, e.g., 1.5in + 10pt
+\RequirePackage{multicol} % Intermix single and multiple columns. by "columns" I think this means page columns
+\RequirePackage{multirow} % Create tabular cells spanning multiple rows
+\RequirePackage{subcaption} % Support for sub-captions
+\RequirePackage{tabularx} % Tabulars with adjustable-width columns
+\RequirePackage{tabulary} % Tabular with variable width columns balanced
+\RequirePackage{titlesec} % Select alternative section titles. \titleformat
+\RequirePackage[nomessages]{fp} % Fixed point arithmetic
+\RequirePackage[normalem]{ulem} % Package for underlining.  \ul (underline) command which will break over line ends. also \sout
+\RequirePackage[font=small]{caption} % Customising captions in floating environments
+\RequirePackage{enumitem} % Control layout of itemize, enumerate, description. leftmargin=*
+% \RequirePackage{eso-pic} % Add picture commands (or backgrounds) to every page. \AddToShipoutPictureBG
+\RequirePackage{background} % Placement of background material on pages of a document. \backgroundsetup
+\RequirePackage{makecell} % Tabular column heads and multilined cells. \makecell
+\RequirePackage{tasks} % Horizontally columned lists. \tasks
+% \RequirePackage{xstring} % String manipulation for (La)TeX.  string substitutions
+% \RequirePackage{xparse} % A generic document command parser.
+\RequirePackage{environ} % A new interface for environments in LaTeX. \NewEnviron
+\RequirePackage{keyval} % Process 'key=value' schemes.
+\RequirePackage{ifthen} % Conditional commands in LaTeX documents/ \ifthenelse
+% \RequirePackage{xifthen} % Extended conditional commands.
+\RequirePackage{anyfontsize} % Select any font size in LaTeX
+\RequirePackage{adjustbox} % For moving boxes around horizontally and vertically
+
+
+% fonts
+% \RequirePackage[varqu,varl]{inconsolata} % A monospaced font, with support files for use with TeX.
+% \RequirePackage{courier} % Adobe Type 1 “free” copies of Courier. courier font
+% \RequirePackage{luatexja-fontspec} % The LuaTeX-ja package is a macro package for typesetting high-quality Japanese documents when using LuaTeX.
+% \RequirePackage{fontspec} % Advanced font selection in XeLaTeX and LuaLaTeX. lotsa fonts?
+% \RequirePackage{mathptmx} % Use Times as default text font, and provide maths support.
+% \RequirePackage[default,scale=0.82]{opensans} % The Open Sans font family, and LaTeX support.
+
+
+% fontenc should be loaded after fonts?
+\RequirePackage[T1]{fontenc} % Standard package for selecting font encodings. A font encoding is a mapping of the character codes to the font glyphs that are used to typeset your output.
+    % If you don't use [T1]{fontenc},
+    % - Words containing accented characters cannot be automatically hyphenated,
+    % - You cannot properly copy-and-paste such words from the output (DVI/PS/PDF),
+    % - Characters like the pipe sign, less than and greater sign give unexpected results in text.
+
+% for args to this .sty file
+\RequirePackage{kvoptions} % Key value format for package options. pass key-value options to .sty file
+
+% must be near the bottom
+\RequirePackage{hyperref} % Extensive support for hypertext in LaTeX.
+
+% geometry must be loaded before hyperref?
+\RequirePackage{geometry} % Flexible and complete interface to document dimensions. good default margins?
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% process options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareStringOption[\the\year{}]{year}
+\DeclareStringOption[Example]{shorttitle}
+\DeclareStringOption{title}
+\DeclareStringOption{front}
+\DeclareStringOption[N/A]{headerimage}
+\DeclareStringOption[N/A]{footerimage}
+\DeclareStringOption[N/A]{bgimage}
+\DeclareStringOption[white]{boxtextcolor}
+\DeclareStringOption[Goldenrod]{toclinkcolor}
+\DeclareStringOption[NOIBrightRed2023]{boxbgcolor}
+\DeclareStringOption[Problem]{problemlead}
+\ProcessKeyvalOptions*
+
+\newcommand{\contestyear}{\problemstatements@year}
+\newcommand{\contestshorttitle}{\problemstatements@shorttitle}
+
+\expandafter\ifblank\expandafter{\problemstatements@title}{%
+    \newcommand{\contesttitle}{MATH 71.1 \contestyear{} \contestshorttitle{}}%
+}{%
+    \newcommand{\contesttitle}{\problemstatements@title}%
+}%
+
+\expandafter\ifblank\expandafter{\problemstatements@front}{%
+    \newcommand{\contestfront}{\textsf{\contestshorttitle}}%
+}{%
+    \newcommand{\contestfront}{\problemstatements@front}%
+}%
+
+\newcommand{\contestheaderimage}{\problemstatements@headerimage}
+\newcommand{\contestfooterimage}{\problemstatements@footerimage}
+\newcommand{\problemlead}{\problemstatements@problemlead}
+\newcommand{\contestbg}{\includegraphicsif[width=\pagewidth]{\problemstatements@bgimage}}
+\newcommand{\contestboxbgcolor}{\problemstatements@boxbgcolor}
+\newcommand{\contestboxtextcolor}{\problemstatements@boxtextcolor}
+\newcommand{\contesttoclinkcolor}{\problemstatements@toclinkcolor}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% custom colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% http://latexcolor.com/
+\definecolor{orange}{RGB}{255, 140, 0}%
+\definecolor{green}{RGB}{0, 128, 0}%
+\definecolor{hanblue}{rgb}{0.27, 0.42, 0.81}%
+\definecolor{lavenderblue}{rgb}{0.8, 0.8, 1.0}%
+\definecolor{lavender(web)}{rgb}{0.9, 0.9, 0.98}%
+\definecolor{NOIBrightRed2023}{RGB}{208, 56, 57}%
+\definecolor{NOILightOrange2024}{RGB}{212, 121, 51}%
+\definecolor{NOIOrange2024}{RGB}{251, 205, 105}%
+\definecolor{AlgolympicsOrange2024}{RGB}{251, 205, 105}%
+\colorlet{verylightgray}{white!96!black}
+\colorlet{verydarkgray}{black!75!white}
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% typography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+% \titleformat{\subsection}
+%   {\bfseries}
+%   {}{0em}{}
+
+% If you want letter size:
+%\pdfpagewidth 8.5in
+%\pdfpageheight 11in
+
+
+
+%% paragraph spacing
+
+% by default uses the layout given by parskip package (zero \parindent and nonzero \parskip)
+
+% % no indents, space between paragraphs
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{1em}
+
+% % has indents, single space between paragraphs
+% \setlength{\parindent}{3em}
+% \setlength{\parskip}{0pt}
+
+% hyperlinks setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=\contesttoclinkcolor,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=blue
+}
+
+% For hiragana/katakana
+\DeclareFontFamily{U}{min}{}
+\DeclareFontShape{U}{min}{m}{n}{<-> udmj30}{}
+
+% % For Kanji/Hanzi
+% \setmainjfont{FandolSong}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% page format
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% header and footer setup
+\pagestyle{fancy}
+\fancyhf{}
+
+% header
+\lhead{
+    \textsf{MATH 71.1}
+    % \includegraphics[scale=0.15]{img/headers/left-header.png}
+}
+\chead{\includegraphicsif[width=0.9\textwidth]{\contestheaderimage}}
+\rhead{
+    \textsf{Ch.2 SALT \emoji{salt}}
+}
+% footer
+\lfoot{}
+\cfoot{}
+\rfoot{\textsf{\large \thepage}}
+
+% clear the line/rule at the header
+\renewcommand{\headrulewidth}{0pt}
+
+% depth of table of contents
+% \setcounter{tocdepth}{0} % chapter (not relevant for articles/problem statements)
+\setcounter{tocdepth}{1} % section (problems are 'section level')
+% \setcounter{tocdepth}{2} % subsection
+% \setcounter{tocdepth}{3} % subsubsection (maybe?)
+% \setcounter{tocdepth}{4} % paragraph
+% \setcounter{tocdepth}{5} % subparagraph
+ 
+
+
+% some measurement adjustments
+
+%%%%%
+% classic way of adjusting measurements.
+%%%%%
+
+% useful diagram: https://ctan.math.illinois.edu/info/lshort/english/lshort-a5.pdf page 110 (page 124 in pdf
+% vertical stuff, top to bottom
+% \addtolength\voffset{0in}
+\addtolength\topmargin{-0.67in}
+\addtolength\headheight{0.6in}
+\addtolength\headsep{0.07in}
+\addtolength\textheight{1.0in} % TEXT HEIGHT
+% \addtolength\textheight{-0.17in} % TEXT HEIGHT
+\addtolength\footskip{0.27in}
+
+% horizontal stuff, left to right
+% \addtolength\hoffset{0in}
+% \addtolength\oddsidemargin{0in} % or "\evensidemargin"
+% \addtolength\textwidth{0in} % TEXT WIDTH
+% \addtolength\marginparsep{0in} % sets the gap (distance) between margin notes and the text of your document. (https://www.overleaf.com/learn/latex/Margin_notes)
+% \addtolength\marginparwidth{0in} % determines the width of margin notes and thus the length of lines typeset in the margin note. (https://www.overleaf.com/learn/latex/Margin_notes)
+
+% vertical push in margin notes
+% \addtolength\marginparpush{0in} % defines the minimum separation (vertical) distance between \marginpar notes.  (https://www.overleaf.com/learn/latex/Margin_notes)
+
+%%%%%
+% "geometry" way of adjusting measurements.
+%%%%%
+
+% TODO feel free to convert the above to "geometry"-style measurements
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% generic custom commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% theorems
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{claim}{Claim}[section]
+\newtheorem{proposition}{Proposition}[section]
+
+% % for tables? for array/tabular
+% \newcolumntype{L}[0]{>{\hsize=\hsize\raggedright\arraybackslash}X}%
+% \newcolumntype{C}[0]{>{\hsize=\hsize\centering\arraybackslash}X}%
+
+% % include graphic iff the file exists
+\newcommand\includegraphicsif[2][]{%
+    \IfFileExists{#2}{\includegraphics[#1]{#2}}{\ignorespaces}
+}
+
+% invisible sections
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{#1}%
+  \sectionmark{#1}}
+  
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}%
+
+% background
+\newcommand\setBG[1]{
+    \backgroundsetup{
+        scale=1,
+        color=black,
+        opacity=1,
+        angle=0,
+        contents={#1}%
+    }
+}%
+
+\newcommand\achtung[1]{{\color{red}\textbf{\underline{#1}}}}
+
+% \newcommand\fillpagewithBG[1]{%
+% \put(0,0){%
+% \parbox[b][\paperheight]{\paperwidth}{%
+% \vfill
+% \centering
+% \includegraphicsif[width=\paperwidth,height=\paperheight, keepaspectratio]{#1}%
+% \vfill
+% }}}
+
+% inline minted
+\setminted{breaklines, linenos}
+
+\newmintinline[python]{python}{}
+\newmintinline[java]{java}{}
+\newmintinline[cpp]{cpp}{}
+
+\definecolor{lighter}{rgb}{0.7, 0.7, 0.7}
+\newcommand\lighter[1]{{\color{lighter}#1}}
+
+
+% context-free grammar stuff
+\newcommand\gramtok[1]{\text{\texttt{#1}}}
+\newcommand\gramelt[1]{\langle \mathsf{#1} \rangle}
+\newcommand\gramplus{}
+\newcommand\gramtrans{\to}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% contest-specific custom commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% colors
+% \newcommand{\contestboxbgcolor}{Gainsboro}
+% \newcommand{\contestboxbgcolor}{lavender(web)}
+% \newcommand{\contestboxbgcolor}{Bittersweet}
+% \newcommand{\contestboxbgcolor}{Salmon}
+% \newcommand{\contestboxbgcolor}{NOIBrightRed2023}
+
+% problem counter ("A", "B", ...)
+\newcounter{ProblemID}
+
+% "My Title" --> "Problem X: My Title"
+\newcommand\letteredtitle[1]{\problemlead{} \Alph{ProblemID}: #1}%
+\newcommand\noleadletteredtitle[1]{\Alph{ProblemID}: #1}%
+% "My Title" --> "Problem: My Title"
+\newcommand\unletteredtitle[1]{\problemlead{}: #1}%
+\newcommand\noleadunletteredtitle[1]{#1}%
+
+% to "create a new problem", use \problem instead of \section or something
+\define@key{problemkeys}{tl}{\def\probs@probtl{#1}}%
+\define@key{problemkeys}{ml}{\def\probs@probml{#1}}%
+\define@key{problemkeys}{standalone}[true]{
+    \def\probs@probstandalone{#1}%
+    \def\probs@probsectiontitle{\probs@probunletteredsectiontitle}%
+    }%
+\newcommand\problem[2][]{%
+    % TODO fix issue with "standalone". Currently it is buggy and "standalone=false" is the same as "standalone=true".
+    % Also we might want to remove the problem letter in the header if it is standalone.
+    \addtocounter{ProblemID}{1}%
+    \def\probs@probletteredsectiontitle{\noleadletteredtitle{#2}}%
+    \def\probs@probunletteredsectiontitle{\noleadunletteredtitle{#2}}%
+    \def\probs@probsectiontitle{\probs@probletteredsectiontitle}%
+    \setkeys{problemkeys}{%
+        tl={},%
+        ml={},%
+        % standalone=false,%
+        #1%
+    }%
+    % TODO replace this with conditional based on 'standalone'
+    \invisiblesection{\probs@probsectiontitle}%
+    % TODO remove \Alph{ProblemID} if standalone
+    \begin{center}%
+        { \LARGE \problemlead{} \Alph{ProblemID}}\par%
+        { \Large \bfseries #2 }\par%
+        \expandafter\ifblank\expandafter{\probs@probtl}{}{ { \large Time Limit: \probs@probtl }\par }%
+        \expandafter\ifblank\expandafter{\probs@probml}{}{ { \large Memory Limit: \probs@probml } }%
+    \end{center}%
+}%
+
+% use this in case the title is too long for the footer: \problemshortmark{abbreviated title}
+\newcommand\problemshortmark[1]{\markboth{\noleadletteredtitle{#1}}{}}%
+
+% custom verbatim environment for I/O
+\newenvironment{IObox}%
+    {\vspace*{-6pt}\VerbatimEnvironment\begin{BVerbatim}[baseline=t]}%
+    {\end{BVerbatim}\vspace*{6pt}}%
+
+\newcommand\IOboxInput[1]{\vspace*{-6pt}\BVerbatimInput[baseline=t]{#1}\vspace*{6pt}}%
+
+% sample I/O with two extra arguments denoting the relative sizes of I and O.
+\newlength{\customblocktotal}
+\newlength{\customblockoff}
+\setlength{\customblocktotal}{5.58in}
+\setlength{\customblockoff}{0.082in}
+
+\newlength{\probs@sampi}
+\newlength{\probs@sampo}
+\define@key{sampleIOkeys}{f}{%
+    \def\probs@sampfile{#1}%
+    \def\probs@sampifile{#1.in}%
+    \def\probs@sampofile{#1.ans}%
+    }%
+\define@key{sampleIOkeys}{n}{\def\probs@sampidx{#1}}%
+\define@key{sampleIOkeys}{i}{\def\probs@sampinput{#1}}%
+\define@key{sampleIOkeys}{o}{\def\probs@sampoutput{#1}}%
+\define@key{sampleIOkeys}{iweight}{\def\probs@sampiweight{#1}}%
+\define@key{sampleIOkeys}{oweight}{\def\probs@sampoweight{#1}}%
+\newcommand\sampleIBox{\IOboxInput{\probs@sampifile}}%
+\newcommand\sampleOBox{\IOboxInput{\probs@sampofile}}%
+\newenvironment{sampleIO}[1][]{
+    \setkeys{sampleIOkeys}{%
+        n={},%
+        f={},%
+        i={Input},%
+        o={Output},%
+        iweight=1,%
+        oweight=1,%
+        #1%
+    }%
+    
+    \setlength{\probs@sampi}{(\customblocktotal - 2\customblockoff) * \probs@sampiweight / (\probs@sampiweight + \probs@sampoweight)}
+    \setlength{\probs@sampo}{\customblocktotal - 2\customblockoff - \probs@sampi}
+    \small
+    \vspace*{0.1in}
+    \begin{center}
+        \begin{tabular}{|p{\probs@sampi}|p{\probs@sampo}|}
+        \arrayrulecolor{\contestboxbgcolor}
+        \hline
+        \rowcolor{\contestboxbgcolor}
+        \thead[cl]{{\color{\contestboxtextcolor}\probs@sampinput{} \probs@sampidx{}}}     &
+        \thead[cl]{{\color{\contestboxtextcolor}\probs@sampoutput{} \probs@sampidx{}}}
+        \arrayrulecolor{\contestboxbgcolor}
+        \\ \hline
+}{
+        \arrayrulecolor{\contestboxbgcolor}
+        \\ \hline
+        \end{tabular}
+    \end{center}
+    \normalsize
+}%
+
+% block version for sample I/O that's "long", i.e., stretches across the line.
+% Create two, one for I and one for O.
+\newenvironment{sampleIOblock}[1]{
+    \small
+    \vspace*{0.1in}
+    \begin{center}
+    \begin{tabular}{|p{\customblocktotal}|}
+    \arrayrulecolor{\contestboxbgcolor}
+    \hline
+    \rowcolor{\contestboxbgcolor}
+    \thead[cl]{{\color{\contestboxtextcolor}#1}}
+    \arrayrulecolor{\contestboxbgcolor}
+    \\ \hline
+}{
+    \arrayrulecolor{\contestboxbgcolor}
+    \\ \hline
+    \end{tabular}
+    \end{center}
+    \normalsize
+}%
+
+
+% table of constraints valid for all subtasks.
+\newcommand\constraints[1]{
+    \constraintsB{Constraints}{#1}
+}%
+
+\newcommand\constraintsB[2]{
+    \small
+    \vspace*{0.1in}
+    \begin{center}
+    \begin{tabular}{|p{\customblocktotal}|}
+    \arrayrulecolor{\contestboxbgcolor}
+    \hline
+    \rowcolor{\contestboxbgcolor}
+    \thead[cl]{{\color{\contestboxtextcolor}#1}}
+    \arrayrulecolor{\contestboxbgcolor}
+    \\ \hline
+    \makecell[tl]{#2}
+    \arrayrulecolor{\contestboxbgcolor}
+    \\ \hline
+    \end{tabular}
+    \end{center}
+    \normalsize
+}%
+
+% table of subtask constraints and points
+\renewcommand\theadfont{\small\bfseries}
+\renewcommand\cellgape{\Gape[3pt]}
+\newlength{\subtaskid}
+\newlength{\subtaskpoints}
+\newlength{\subtaskconstraints}
+\setlength{\subtaskid}{0.61in}
+\setlength{\subtaskpoints}{0.49in}
+\setlength{\subtaskconstraints}{\customblocktotal - 4\customblockoff - \subtaskid - \subtaskpoints}
+\newenvironment{subtasks}{
+    \small
+    \vspace*{0.12in}
+    \begin{center}
+    \begin{tabular}{|p{\subtaskid}p{\subtaskpoints}p{\subtaskconstraints}|}
+    \arrayrulecolor{\contestboxbgcolor}
+    \hline
+    \rowcolor{\contestboxbgcolor}
+    \thead[cc]{{\color{\contestboxtextcolor}Subtask}} & \thead[cc]{{\color{\contestboxtextcolor}Points}} & \thead[cl]{{\color{\contestboxtextcolor}Constraints}}  
+    \arrayrulecolor{\contestboxbgcolor}
+    \\ \hline
+}{
+    \end{tabular}
+    \end{center}
+    \normalsize
+}%
+
+% a single subtask inside the subtasks environment
+\newcommand\subtask[3]{
+    \makecell[tc]{#1} &
+    \makecell[tc]{\bfseries #2} &
+    \makecell[tl]{#3}
+    \arrayrulecolor{\contestboxbgcolor}
+    \\ \hline
+}%
+
+% TODO fix height/padding issue in \sampleIO and \sampleIOblock if there's only one line
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% initialization
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setBG{\contestbg}

@@ -1,0 +1,181 @@
+\providecommand{\titlepagecoverimg}{img/auxl/cover.png}
+
+\providecommand{\prefacenotesIO}{}
+\providecommand{\prefacenotesinteractive}{}
+\providecommand{\prefacenotesadditional}{}
+
+% add this as \prefacenotesIO for finals
+% We recommend learning and using these functions during the Practice Session.
+
+% possible item to add, \prefacenotesadditional
+% \item All problems are solvable in C++, but the same is not guaranteed for Python due to its slowness.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+\vspace*{4.65in}
+\setBG{\includegraphics[width=\pagewidth]{\titlepagecoverimg}}
+\end{titlepage}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% long notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \newcommand\preem{rage}
+\newcommand\preem{smiling-face-with-sunglasses}
+
+\cleardoublepage
+
+\markboth{Important!}{}
+% \vspace*{0.05in}
+% {\Large \color{red}{\textbf{Important!} Read the following:}}
+% {\Huge {\color{red}{\textbf{Important!} Read the following: {\fontsize{80}{96}\texttt{\emoji{\preem}}} }} }
+% {\Huge {\color{red}{\textbf{{\texttt{\emoji{rage}} Important!}} Read the following: }} }
+
+% \newlength{\ragewidth}
+% \newlength{\rageheight}
+% \settowidth{\ragewidth}{\scalebox{3.3}{\texttt{\emoji{\preem}}}}
+% \settoheight{\rageheight}{\texttt{\emoji{\preem}}}
+% {\Huge{\color{red}{\textbf{%
+%     % \makebox[\ragewidth][r]{\scalebox{2}{\texttt{\emoji{\preem}}}}
+%     \parbox[b][\rageheight]{\ragewidth}{
+%         \makebox[\ragewidth][r]{
+%         \lapbox[\width]{17pt}{\raisebox{2pt}{\scalebox{5.2}{\texttt{\emoji{\preem}}}}}}}
+%     Important!} Read the following:}}}
+
+\textbf{Access the contest website} at the following url:
+\begin{center}
+    \url{https://tinyurl.com/2025AlgolympicsFinalsPractice}
+\end{center}
+
+\begin{description}
+
+\item[Practice Round] This is the time to test the contest environment.
+\begin{itemize}
+    \item Familiarize yourself with the text editor, and practice compiling/running locally.
+    \item Practice submissions and using the clarification system on DOMJudge.
+\end{itemize}
+
+%\item[Test Cases.]
+\item[Hidden Test Cases.]
+Your solution will be checked by running it against one or more (usually several) hidden test cases. You will not have access to these cases, but a correct solution is expected to handle them correctly.
+
+% \item[Output Format.]
+\item[Strict Output Format.]
+The output checker is {\color{red}{\textbf{strict}}}. Follow these guidelines strictly:
+
+\begin{itemize}
+    \item It is \textbf{space sensitive}. Do not output extra leading or trailing spaces. Do not output extra blank lines unless explicitly stated.
+    \item It is \textbf{case sensitive}. So, for example, if the problem asks for the output in lowercase, follow it.
+    \item Ensure that your output ends with a newline (by ending with \verb|cout << endl| perhaps, in C++; this is already the default behavior of \verb|print| in Python)
+    \item Do not print any tabs. (No tabs will be required in the output.)
+    \item Do not output anything else aside from what's asked for in the Output section. So, do not print things like ``\texttt{Please enter t}''. 
+\end{itemize}
+
+Not following the output format strictly and exactly will likely result in the verdict ``\textit{Output isn't correct}''.
+
+% \item[Standard I/O.]
+\item[Use Standard I/O.]
+Do not read from, or write to, a file. You must read from the standard input and write to the standard output.
+
+\item[Submit Code Only.]
+Only include \textbf{one} file when submitting: the source code (.cpp, .py, etc.) and nothing else.
+
+\item[No Java Package.]
+For Java submissions, do not include a \java{package} line.
+
+% \item[Only Builtin Libraries.]
+% Do not use third-party libraries. Only libraries that come installed with the compilers are available on the evaluation machines.
+
+% \item[Filename.]
+\item[No Weird Filenames.]
+Only use letters, digits and underscores in your filename. Do not use spaces or other special symbols.
+
+% \item[Fast I/O.]
+\item[Use Fast I/O.]
+Many problems have large input file sizes, so use fast I/O. For example:
+\begin{itemize}
+\item In C/C++, use \cpp{scanf} and \cpp{printf}.
+\item In Python, use \python{sys.stdin.readline()}
+\end{itemize}
+
+\prefacenotesIO{}
+
+% \item[Interactive Problems.]
+% \item[Flush On Interactive Problems.]
+% On interactive problems, make sure to \textbf{flush} your output stream after printing.
+% \begin{itemize}
+%     % weird hack with mintinline since it's converting << to a special character. feel free to use better fix
+%     \item In C++, use \cpp{fflush(stdout);} or \mintinline[escapeinside=||]{cpp}{cout <||< endl;}
+%     \item In Python, use \python{sys.stdout.flush()} or \python{print(flush=True)}
+%     \item For more details, including for other languages, ask a question/clarification through CMS.
+% \end{itemize}
+
+% \prefacenotesinteractive{}
+
+% \prefacenotesadditional{}
+
+\end{description}
+
+Good luck and enjoy the contest!  \texttt{\emoji{smiley}}
+
+
+% TODO
+% "how compprog works"
+%     link to absolute beginner tutorial (video?), 
+%     link to absolute beginner tutorial in abakoda?
+%     link to absolute beginner tutorial document of our own making
+% link to more specific/obscure/technical stuff (like java package name)
+% link to verdicts page ("Documentation" in CMS)
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% table of contents, and short notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setBG{\contestbg}
+
+% \textsf{\tableofcontents}
+% \markboth{Table of Contents}{}
+
+% \begin{comment}
+% \section*{Notes}
+
+% these notes are intentionally repeated from the "Very Important" section below.
+
+% \begin{itemize}
+% \item Many problems have large input file sizes, so use fast I/O. For example:
+% \begin{itemize}
+%     \item In C/C++, use \cpp{scanf} and \cpp{printf}.
+%     \item In Python, use \python{sys.stdin.readline()}
+% \end{itemize}
+
+% \prefacenotesIO{}
+
+% \item On interactive problems, make sure to \textbf{flush} your output stream after printing.
+% \begin{itemize}
+%     % weird hack with mintinline since it's converting << to a special character. feel free to use better fix
+%     \item In C++, use \cpp{fflush(stdout);} or \mintinline[escapeinside=||]{cpp}{cout <||< endl;}
+%     \item In Python, use \python{sys.stdout.flush()} or \python{print(flush=True)}
+%     \item For more details, including for other languages, ask a question/clarification through CMS.
+% \end{itemize}
+
+% \prefacenotesinteractive{}
+
+% \prefacenotesadditional{}
+% \end{itemize}
+
+% Good luck and enjoy the problems!
+% \end{comment}

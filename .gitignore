@@ -1,0 +1,15 @@
+basura*
+**/data/**/input/
+**/data/**/output/
+**/data/**/temp/
+__pycache__
+*.pyc
+kgkompiled/
+build/
+*.egg-info/
+*.egg
+tests/
+*.class
+*.exe
+testlib.h
+**/editorials/**/*.html

@@ -1,0 +1,166 @@
+% Slug: four-of-diamonds
+% Description: ?
+% Author: Cisco
+% Story: Cisco
+% Test Data: Cisco
+% Testers: ?
+% Editorial: ?
+% TempSlug: four-of-diamonds
+
+% Please don't modify or delete TempSlug
+
+\problem{Six Seven}
+Alice was tasked with implementing Dijkstra's shunting yard, an algorithm for parsing arithmetic expressions, respecting correct operator precedence (i.e. MDAS).  However, she submitted a meme instead, which annoyed her teacher.
+\begin{itemize}
+    \item The \texttt{+} operation is implemented as \textbf{string concatenation} instead of addition, \newline e.g. \texttt{6 + 7} evaluates to \texttt{67}
+    \item The \texttt{*} operation is implemented as \textbf{string duplication} instead of multiplication, \newline e.g. \texttt{6 * 7} evaluates to \texttt{6666666}
+    \item The \texttt{-} operation is implemented as normal, except negative numbers were not implemented, so if any operation would result in one at any intermediate step \newline (e.g. \texttt{6 - 7}) then the computer explodes.
+    \item The \texttt{/} operation is implemented as normal, except non-integer fractions were not implemented, so if any operation would result in one at any intermediate step \newline (e.g. \texttt{6 / 7}) then the computer explodes.
+    \item Finally, the \textbf{only} accepted integer literals are \texttt{6} and \texttt{7}.
+\end{itemize}
+Otherwise, her program correctly follows the MDAS convention.
+\begin{itemize}
+    \item It recursively evaluates parenthesized expressions first, then
+    \item resolves \texttt{*} and \texttt{/} operations from left to right, then
+    \item resolves \texttt{+} and \texttt{-} operations from left to right.
+\end{itemize}
+Alice's program ignores spaces between tokens.
+
+For example, \texttt{7 - 6 + 6} equals \texttt{16}, evaluated as follows:
+\begin{align*}
+    \texttt{7 - 6 + 6}
+    &= \texttt{{\color{red}1} + 6} \\
+    &= \texttt{{\color{red}16}}.
+\end{align*}
+
+For another example, \texttt{(7+7) - (6+7 - 7)/6} equals \texttt{10}, evaluated as follows:
+\begin{align*}
+    \texttt{(7+7) - (6+7 - 7)/6}
+    &= \texttt{{\color{red}77} - (6+7 - 7)/6}, \\
+    &= \texttt{77 - ({\color{red}67} - 7)/6}, \\
+    &= \texttt{77 - {\color{red}60}/6}, \\
+    &= \texttt{77 - \color{red}10} \\
+    &= \texttt{\color{red}67}.
+\end{align*}
+
+For one final example, \texttt{6*6 / (6 + (6 + 6)) / 7} equals \texttt{143}, evaluated as follows:
+\begin{align*}
+    \texttt{6*6 / (6 + (6 + 6)) / 7}
+    &= \texttt{6*6 / (6 + {\color{red}66}) / 7} \\
+    &= \texttt{6*6 / {\color{red}666} / 7} \\
+    &= \texttt{{\color{red}666666} / 666 / 7} \\
+    &= \texttt{{\color{red}1001} / 7} \\
+    &= \texttt{{\color{red}143}}.
+\end{align*}
+
+Given a positive integer $n$, your goal is to construct any arithmetic expression (using parentheses, \texttt{6} and \texttt{7}, and the \texttt{*/+-} operations) which evaluates to $n$ using Alice's meme program.  \textit{For completeness}, here are the other limitations of Alice's program:
+\begin{itemize}
+    \item If the expression contains more than $1000$ characters (including spaces), \newline the computer blows up.
+    \item If at any intermediate step an integer with a value greater than $2^{64}$ is produced, \newline the computer blows up.
+\end{itemize}
+
+\subsection*{Input Format}
+
+Input consists of a single positive integer $n$.
+
+
+\subsection*{Output Format}
+
+Output a single line containing \textit{any} valid expression which evaluates to $n$.
+
+We give the following formal definition of what exactly constitutes an \textit{expression}.
+
+An \textit{expression} is a sequence of one or more sub-expressions, separated by operators.  \newline
+A \textit{sub-expression} is one of the following:
+\begin{itemize}
+\item an integer literal (which must be \texttt{6} or \texttt{7}); or
+\item another expression, enclosed in parentheses \texttt{()}
+\end{itemize}
+
+Each operator must be one of \texttt{+} or \texttt{-} or \texttt{*} or \texttt{/}
+
+Spaces between tokens are ignored, so add as many as you like (within the char. count).
+
+Here are some more examples of valid expressions:
+\begin{center}
+    \texttt{(7) - ((6)) + (((7)))}
+    
+    \texttt{(6 + 7 * 6)}
+
+    \texttt{(((((((6)))))))}
+
+    \texttt{7}
+\end{center}
+These evaluate to \texttt{17} and \texttt{777783} and \texttt{6} and \texttt{7}, respectively.
+
+\subsection*{Constraints}
+
+\textit{Your program will only be tested on data that satisfies the following constraints.}
+
+\constraints{
+    $1 \leq n \leq 10^{18}$ \\
+}
+
+\textit{There is no need to validate in your program that these constraints hold.}
+
+% \newpage
+
+\subsection*{Sample I/O}
+
+\begin{sampleIO}
+\begin{verbatim}
+2025
+\end{verbatim}
+&
+\begin{verbatim}
+(67 - 7)/3 + 5*5
+\end{verbatim}
+\end{sampleIO}
+
+\begin{sampleIO}
+\begin{verbatim}
+69
+\end{verbatim}
+&
+\begin{verbatim}
+(23+7 - 7 - 2)/3 - 7
+\end{verbatim}
+\end{sampleIO}
+
+
+% \begin{sampleIO}
+% \begin{verbatim}
+% 2357
+% \end{verbatim}
+% &
+% \begin{verbatim}
+% 2 + 3 + 5 + 7
+% \end{verbatim}
+% \end{sampleIO}
+
+
+% \begin{sampleIO}
+% \begin{verbatim}
+% 911
+% \end{verbatim}
+% &
+% \begin{verbatim}
+% (13*7) + (3 - 2)
+% \end{verbatim}
+% \end{sampleIO}
+
+
+% \begin{sampleIO}
+% \begin{verbatim}
+% 666
+% \end{verbatim}
+% &
+% \begin{verbatim}
+% ((17 - 7) / 5 + 2)*3 + 2*3
+% \end{verbatim}
+% \end{sampleIO}
+
+
+
+% \subsection*{Explanation}
+% TODO

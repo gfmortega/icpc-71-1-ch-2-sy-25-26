@@ -1,0 +1,9 @@
+\contentsline {section}{A: Average Programming Problem}{2}{section.1}%
+\contentsline {section}{B: Card Shufflers of the Cosmos}{4}{section.2}%
+\contentsline {section}{C: Elliptic Curve Geometry}{6}{section.3}%
+\contentsline {section}{D: Inverse Pig Latin}{8}{section.4}%
+\contentsline {section}{E: Poison Distribution}{10}{section.5}%
+\contentsline {section}{F: Shape Rotators}{12}{section.6}%
+\contentsline {section}{G: Silverbach's Conjecture}{14}{section.7}%
+\contentsline {section}{H: The Code of Life: Gene Editing}{16}{section.8}%
+\contentsline {section}{I: The Code of Life: Messenger Editing}{18}{section.9}%

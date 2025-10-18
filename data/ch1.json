@@ -1,0 +1,22 @@
+{
+    "title": "TSALT (Stopped from Appearing in the Long Test)",
+    "code": "SALT",
+    "duration": "1:30:00",
+    "scoreboard_freeze_length": "00:15:00",
+    "langs": [
+        "python3"
+    ],
+    "problems": [
+        "average",
+        "card-shufflers",
+        "elliptic-curve",
+        "inverse-pig-latin",
+        "poison-distribution",
+        "shape-rotators",
+        "silverbach",
+        "the-code-dna",
+        "the-code-rna"
+    ],
+    "site_password": "sinigangnababoynamayhalongmanok",
+    "teams": "teams.json"
+}

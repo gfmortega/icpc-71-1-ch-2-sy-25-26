@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{sys}\PYG{o}{.}\PYG{n}{stdin}\PYG{o}{.}\PYG{n}{readline}\PYG{p}{()}
+\end{Verbatim}
