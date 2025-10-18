@@ -15,6 +15,8 @@ start=0
 # you can run an arbitrary command via "!"
 ! cat sample.in > $
 ! cat sample2.in > $
+! cat sample3.in > $
+! cat sample4.in > $
 # otherwise, the program is searched through "generators" in details.json
 
-gen_random $$ 60 100 > $$
+gen_random $$ 100 1200 2000  > $$

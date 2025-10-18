@@ -1,0 +1,9 @@
+! cat sample1.in > $
+! cat sample2.in > $
+! cat sample3.in > $
+! cat sample4.in > $
+! cat sample5.in > $
+! cat sample6.in > $
+! cat sample7.in > $
+! cat sample8.in > $
+gen_random $$ 12 > $$

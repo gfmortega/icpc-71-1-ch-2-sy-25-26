@@ -1,0 +1,4 @@
+! cat sample1.in > $
+! cat sample2.in > $
+! cat sample3.in > $
+gen_random $$ 100 > $$

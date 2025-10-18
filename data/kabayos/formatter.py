@@ -6,7 +6,7 @@ from kg.formatters import * ### @import
 def format_case(stream, cases, *, print, **kwargs):
     ... # write your formatter here
 
-    a, k = cases
-    print(len(a), k)
+    a, c, k = cases
+    print(len(a), c, k)
     print(*a)
 
