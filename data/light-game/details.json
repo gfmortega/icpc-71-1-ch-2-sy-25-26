@@ -1,5 +1,5 @@
 {
-    "title": "Silverbach's Conjecture",
+    "title": "Light Game",
     "model_solution": "solution.py",
     "validator": "validator.py",
     "testscript": "testscript",

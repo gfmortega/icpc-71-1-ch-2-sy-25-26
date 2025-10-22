@@ -1,5 +1,5 @@
 {
-    "title": "Average Programming Problem",
+    "title": "Kabayos!",
     "model_solution": "solution.py",
     "validator": "validator.py",
     "testscript": "testscript",
@@ -19,6 +19,6 @@
         "For a custom checker template, see:",
         "examples/templates/checker_generic_template.py"
     ],
-    "time_limit": 1,
+    "time_limit": 2,
     "version": "0.2"
 }

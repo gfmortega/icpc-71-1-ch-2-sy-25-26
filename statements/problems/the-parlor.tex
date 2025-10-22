@@ -19,12 +19,6 @@ There are three boxes of three different colors: blue, white, and black, laid ou
     \textit{Image taken from PC Gamer}
 \end{center}
 
-In the room, one would find the following note, explaining the rules of the game:
-\begin{center}
-    \includegraphics[width=0.3\linewidth]{img/parlor-notes.png}
-
-    \textit{Image taken from the Blue Prince wikia}
-\end{center}
 Each statement in the room is of one of the following forms:
 
 \begin{itemize}
@@ -36,9 +30,15 @@ Each statement in the room is of one of the following forms:
     \item \texttt{Exactly two boxes have a statement that is <'true' | 'false'>.}
 \end{itemize}
 
+In the room, one would find the following note, explaining the rules of the game:
+\begin{center}
+    \includegraphics[width=0.3\linewidth]{img/parlor-notes.png}
+
+    \textit{Image taken from the Blue Prince wikia}
+\end{center}
 The gems, of course, are the prize.  Simon must deduce which box contains the gems.
 
-You have been hired as a playtester for the parlor puzzle.  Given statements that would be placed on these boxes, determine if they have a unique solution, admit multiple solutions, or are paradoxical.  Additionally, if they admit a unique solution, determine which box contains the gems.
+You have been hired as a playtester for the parlor puzzle.  Given statements that would be placed on these boxes, determine if they have a unique solution, admit multiple solutions, or are paradoxical.  Additionally, if there is a unique solution, determine which box contains the gems.
 
 \subsection*{Input Format}
 
@@ -70,35 +70,87 @@ Output the answer to each test case in its own line.
 
 \subsection*{Sample I/O}
 
-\begin{sampleIO}
+\begin{sampleIOblock}{Input}{}
 \begin{verbatim}
-TODO
+4
+Exactly two boxes have a statement that is false.
+The gems are in the white box.
+The gems are in the black box.
+---------------------------------------------------------------------------
+The statements on the empty boxes are both true.
+The statement on the box with the gems is false.
+Exactly one box has a statement that is true.
+---------------------------------------------------------------------------
+The gems are in the blue box.
+The gems are in the white box.
+The gems are in the black box.
+---------------------------------------------------------------------------
+The statement on the white box is true.
+The statement on the black box is true.
+The statement on the blue box is true.
+---------------------------------------------------------------------------
 \end{verbatim}
-&
+\end{sampleIOblock}
+
+\begin{sampleIOblock}{Output}{}
 \begin{verbatim}
-TODO
+blue
+black
+AMBIGUOUS
+PARADOX
 \end{verbatim}
-\end{sampleIO}
+\end{sampleIOblock}
+
 
 
 \subsection*{Explanation}
-Suppose the statement on the white box is false.
+Let's imagine how one might solve the first test case by hand.
 \begin{itemize}
-\item This directly tells us that the statement on the blue box is false.
-\item There must be a true statement, so the statement on the black box must be the true one.
-\item Because the statement on the blue box is \textit{false}, we conclude that the gems are in a box with a true statement.
-\item So, the gems are in the black box!
-\item But... if the black box were true, then the gems \textit{should} be in the blue box.
-\item This is a \textbf{contradiction}, so we conclude that the statement on the white box is true.
+    \item Suppose the statement on the blue box is false.
+    \begin{itemize}[label=$\circ$]
+        \item By the rules of the game, there are either one or two false statements.
+        \item If it is not the case that there are two false statements, then there must be \textit{only one} false statement.
+        \item But we know where that false statement is---it's on the blue box!
+        \item Therefore, the statements on the white and black boxes must both be true.
+        \item But hold on, that's a \textbf{contradiction}.  By the rules of the game, there should only be one box with the gems.
+        \item We therefore conclude that the statement on the blue box \textbf{cannot be false}.
+    \end{itemize}
+    \item We have concluded that the statement on the blue box is true.
+        \begin{itemize}[label=$\circ$]
+        \item Therefore, there \textit{are} exactly two false statements.
+        \item Since the statement on the blue box is known to be true, we can conclude that those two false statements are the ones on the white and black boxes.
+        \item If the gems are in neither the white box nor the black box, then only one possibility remains---the gems are in the \texttt{blue} box!
+    \end{itemize}
 \end{itemize}
 
-On the other hand, suppose the statement on the white box is true.
+\newpage
+
+Let's imagine how one might solve the second test case by hand.
 \begin{itemize}
-\item This directly tells us that the statement on the blue box is true.
-\item There must be a false statement, so the statement on the black box must be the false one.
-\item Because the statement on the blue box is \textit{true}, we conclude that the gems are in a box with a false statement
-\item The statement on the black box (that the gems are in the blue) was indeed false!
+    \item Suppose the statement on the black box is true.
+    \begin{itemize}[label=$\circ$]
+        \item If there is only one true statement, and we assumed it to be on this box, then that means the other two boxes must have false statements.
+        \item That tells us this information:  there is a false statement among those on the empty boxes; and the statement on the box with the gems is \textbf{true}.
+        \item Therefore, the gems are in the black box, the only box with a true statement (and also, it is indeed the case that both empty boxes have false statements). 
+    \end{itemize}
+    \item Suppose the statement on the black box is false.
+    \begin{itemize}[label=$\circ$]
+        \item By the rules of the game, there are either one or two true statements.
+        \item If it is not the case that there is one true statement, then there must be \textit{two} true statements.
+        \item Therefore, the other two boxes must have true statements.
+        \item Therefore, the gems are in the black box, the only box with a false statement (and also, it is indeed the case that both empty boxes have true statements). 
+    \end{itemize}
+    \item So it turns out that we are actually not sure about which statements are true and which are false.  But despite that, it \textit{is} a logical surety that the gems are in the \texttt{black} box. 
 \end{itemize}
-
-
-On the other hand suppose the statement 
+Let's think about the third test case.
+\begin{itemize}
+    \item The gems could be in any of the boxes!
+    \item Whatever the case, there would be one true statement and two false statements, which is consistent with the game rules.
+    \item Since it is impossible to tell definitively which box contains the gems, we answer that it is \texttt{AMBIGUOUS}
+\end{itemize}
+Let's think about the fourth test case.
+\begin{itemize}
+    \item Logically, we see that it must be the case that either all statements are true, or all statements are false.
+    \item But, the game rules said that there should always be at least one true statement and at least one false statement.
+    \item Since logic and the game rules are not consistent, the answer is \texttt{PARADOX}
+\end{itemize}

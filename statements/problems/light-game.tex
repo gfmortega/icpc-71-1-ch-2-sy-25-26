@@ -15,13 +15,14 @@ Alice is replaying one of her favorite childhood platformers, \textit{Spongeboy:
 
 Aside from the main story, there are many puzzles which serve as side-objectives which can be completed for additional rewards.  One of these is the infamous \textit{Light Game}.
 
-Spongeboy is dropped into a circular room, with $n$ lights arranged in sequence along the wall.  The lights are numbered $1$ to $n$ in the clockwise direction, and each light exists in one of two states: \textit{off} or \textit{on}. More formally, for each $1 \leq i \leq n$,
+Spongeboy is dropped into a circular room, with $n$ lights arranged in sequence along the wall.  The lights are numbered $1$ to $n$ in the clockwise direction. More formally,
 \begin{itemize}
 \item for each $1 < i \leq n$, light $i-1$ is the left neighbor of light $i$ 
 \newline (also, light $n$ is the left neighbor of light $1$);
 \item for each $1 \leq i < n$, light $i+1$ is the right neighbor of light $i$ 
 \newline (also, light $1$ is the right neighbor of light $n$).
 \end{itemize}
+Each light exists in one of two states: \textit{off} or \textit{on}.
 
 Here is an example layout of the room with $n=8$.  Lights $3$ and $5$ and $7$ are initially on.
 \begin{center}
@@ -48,7 +49,7 @@ Here, ``flipping a state'' means: off lights become on, and on lights become off
 
 Following the same example setup of $n=8$ lights from earlier (where initially, lights $3$ and $5$ and $7$ are on): if we press light $3$, then light $4$, then light $1$, then light $7$, we get the sequence of state changes illustrated in the diagram below.
 \begin{center}
-    \includegraphics[width=0.85\linewidth]{img/light-press.png}
+    \includegraphics[width=0.85\linewidth]{img/light-press-b.png}
 
     \textit{We press light $3$, then press light $4$, then press light $1$, then press light $7$.}
 \end{center}

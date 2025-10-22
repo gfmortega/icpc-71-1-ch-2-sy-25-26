@@ -33,7 +33,7 @@ For example, \texttt{7 - 6 + 6} equals \texttt{16}, evaluated as follows:
     &= \texttt{{\color{red}16}}.
 \end{align*}
 
-For another example, \texttt{(7+7) - (6+7 - 7)/6} equals \texttt{10}, evaluated as follows:
+For another example, \texttt{(7+7) - (6+7 - 7)/6} equals \texttt{67}, evaluated as follows:
 \begin{align*}
     \texttt{(7+7) - (6+7 - 7)/6}
     &= \texttt{{\color{red}77} - (6+7 - 7)/6}, \\
@@ -57,7 +57,7 @@ Given a positive integer $n$, your goal is to construct any arithmetic expressio
 \begin{itemize}
     \item If the expression contains more than $1000$ characters (including spaces), \newline the computer blows up.
     \item If at any intermediate step an integer with a value greater than $2^{64}$ is produced, \newline the computer blows up.
-    \item For \texttt{+} and \texttt{*}, leading zeros are removed at each intermediate step, e.g. \texttt{0 + 0} and \texttt{0 * 5} both evaluate to \texttt{0}
+    \item For \texttt{+} and \texttt{*}, leading zeros are removed at each intermediate step, \newline e.g. \texttt{0 + 0} and \texttt{0 * 5} both evaluate to \texttt{0} (just one \texttt{0})
     \item Finally, \texttt{n * 0} causes the computer to blow up, regardless of the left operand.
 \end{itemize}
 
@@ -156,7 +156,7 @@ These evaluate to \texttt{17} and \texttt{6777777} and \texttt{1111111} and \tex
 
 \begin{sampleIO}
 \begin{verbatim}
-67777777
+6777777
 \end{verbatim}
 &
 \begin{verbatim}

@@ -303,8 +303,8 @@ OUTPUT main.out
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/tex/latex/lm/t1lmss.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm
-OUTPUT /tmp/lua_Q7ONtv
-INPUT /tmp/lua_Q7ONtv
+OUTPUT /tmp/lua_Lg3Mp2
+INPUT /tmp/lua_Lg3Mp2
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /home/cisco/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc
 INPUT /home/cisco/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
@@ -344,8 +344,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr10.tfm
-OUTPUT /tmp/lua_4troHP
-INPUT /tmp/lua_4troHP
+OUTPUT /tmp/lua_z5QSod
+INPUT /tmp/lua_z5QSod
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss12.tfm
 INPUT ./problems/absolute-cinema.tex
@@ -391,8 +391,8 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr5.tfm
 INPUT ./problems/light-game.tex
 INPUT ./img/light-game.png
 INPUT ./img/light-game.png
-INPUT ./img/light-press.png
-INPUT ./img/light-press.png
+INPUT ./img/light-press-b.png
+INPUT ./img/light-press-b.png
 INPUT ./problems/love-game.tex
 INPUT ./problems/mixed-messages.tex
 INPUT ./img/keypad.png

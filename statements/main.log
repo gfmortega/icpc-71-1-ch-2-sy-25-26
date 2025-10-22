@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.6.17)  19 OCT 2025 01:50
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.6.17)  22 OCT 2025 09:22
  system commands enabled.
 **main.tex
 (./main.tex
@@ -1565,7 +1565,7 @@ LaTeX Warning: No \author given.
 
 (./preface/base.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}</tmp/lua_Q7ONtv>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}</tmp/lua_Lg3Mp2>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
 2.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -1597,7 +1597,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
 ) [2
 
-</tmp/lua_4troHP>] (./problems/absolute-cinema.tex
+</tmp/lua_z5QSod>] (./problems/absolute-cinema.tex
 <img/absolute-0e.png, id=66, 1172.38pt x 422.57875pt>
 File: img/absolute-0e.png Graphic file (type png)
 <use img/absolute-0e.png>
@@ -1629,17 +1629,17 @@ Package luatex.def Info: img/hagdang-bato.png  used on input line 14.
 <img/light-game.png, id=98, 317.185pt x 280.04625pt>
 File: img/light-game.png Graphic file (type png)
 <use img/light-game.png>
-Package luatex.def Info: img/light-game.png  used on input line 28.
+Package luatex.def Info: img/light-game.png  used on input line 29.
 (luatex.def)             Requested size: 125.47737pt x 110.78583pt.
 [7
 
 <./img/light-game.png>]
-<img/light-press.png, id=104, 1291.82625pt x 641.39626pt>
-File: img/light-press.png Graphic file (type png)
-<use img/light-press.png>
-Package luatex.def Info: img/light-press.png  used on input line 51.
-(luatex.def)             Requested size: 355.51817pt x 176.51663pt.
-[8<./img/light-press.png>]) [9] (./problems/love-game.tex [10
+<img/light-press-b.png, id=104, 1166.3575pt x 579.16376pt>
+File: img/light-press-b.png Graphic file (type png)
+<use img/light-press-b.png>
+Package luatex.def Info: img/light-press-b.png  used on input line 52.
+(luatex.def)             Requested size: 355.51817pt x 176.53421pt.
+[8<./img/light-press-b.png>]) [9] (./problems/love-game.tex [10
 
 ]) [11] (./problems/mixed-messages.tex
 <img/keypad.png, id=124, 1284.8pt x 1040.88875pt>
@@ -1670,45 +1670,45 @@ File: img/parlor-boxes.png Graphic file (type png)
 <use img/parlor-boxes.png>
 Package luatex.def Info: img/parlor-boxes.png  used on input line 17.
 (luatex.def)             Requested size: 292.77629pt x 74.01653pt.
-<img/parlor-notes.png, id=159, 470.75874pt x 519.9425pt>
-File: img/parlor-notes.png Graphic file (type png)
-<use img/parlor-notes.png>
-Package luatex.def Info: img/parlor-notes.png  used on input line 24.
-(luatex.def)             Requested size: 125.47737pt x 138.5854pt.
 
-Overfull \hbox (5.78392pt too wide) in paragraph at lines 31--32
+Overfull \hbox (5.78392pt too wide) in paragraph at lines 25--26
 []\T1/lmtt/m/n/10.95 The gems <'are' | 'are not'> in the <'blue' | 'white' | 'bl
 ack'> box. 
  []
 
 
-Overfull \hbox (46.02505pt too wide) in paragraph at lines 32--33
+Overfull \hbox (46.02505pt too wide) in paragraph at lines 26--27
 []\T1/lmtt/m/n/10.95 The statement on the <'blue' | 'white' | 'black'> box is <'
 true' | 'false'>. 
  []
 
+<img/parlor-notes.png, id=159, 470.75874pt x 519.9425pt>
+File: img/parlor-notes.png Graphic file (type png)
+<use img/parlor-notes.png>
+Package luatex.def Info: img/parlor-notes.png  used on input line 35.
+(luatex.def)             Requested size: 125.47737pt x 138.5854pt.
 [19
 
-<./img/parlor-boxes.png><./img/parlor-notes.png>] [20]) [21] (./problems/the-ra
-inbow-connection.tex
-<img/rainbow-b.png, id=175, 859.21pt x 323.2075pt>
+<./img/parlor-boxes.png><./img/parlor-notes.png>] [20] [21]) [22] (./problems/t
+he-rainbow-connection.tex
+<img/rainbow-b.png, id=179, 692.5875pt x 304.13625pt>
 File: img/rainbow-b.png Graphic file (type png)
 <use img/rainbow-b.png>
 Package luatex.def Info: img/rainbow-b.png  used on input line 17.
-(luatex.def)             Requested size: 271.86234pt x 102.26462pt.
-<img/rainbow-1-b.png, id=176, 859.21pt x 323.2075pt>
+(luatex.def)             Requested size: 240.49458pt x 105.6093pt.
+<img/rainbow-1-b.png, id=180, 692.5875pt x 304.13625pt>
 File: img/rainbow-1-b.png Graphic file (type png)
 <use img/rainbow-1-b.png>
 Package luatex.def Info: img/rainbow-1-b.png  used on input line 23.
-(luatex.def)             Requested size: 271.86234pt x 102.26462pt.
-<img/rainbow-2-b.png, id=177, 859.21pt x 323.2075pt>
+(luatex.def)             Requested size: 240.49458pt x 105.6093pt.
+<img/rainbow-2-b.png, id=181, 692.5875pt x 304.13625pt>
 File: img/rainbow-2-b.png Graphic file (type png)
 <use img/rainbow-2-b.png>
 Package luatex.def Info: img/rainbow-2-b.png  used on input line 29.
-(luatex.def)             Requested size: 271.86234pt x 102.26462pt.
-[22
+(luatex.def)             Requested size: 240.49458pt x 105.6093pt.
+[23
 
-<./img/rainbow-b.png><./img/rainbow-1-b.png><./img/rainbow-2-b.png>]) [23] (./m
+<./img/rainbow-b.png><./img/rainbow-1-b.png><./img/rainbow-2-b.png>]) [24] (./m
 ain.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1719,14 +1719,14 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 44490 strings out of 476553
+ 44496 strings out of 476553
  125086,1977958 words of node,token memory allocated
  824 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 11 attribute, 113 glue_spe
 c, 11 attribute_list, 3 write nodes
-   avail lists: 1:4,2:1883,3:438,4:588,5:375,6:126,7:4883,8:39,9:1264,10:15,11:3
+   avail lists: 1:5,2:1883,3:438,4:588,5:860,6:126,7:4931,8:39,9:1264,10:15,11:3
 22
- 65310 multiletter control sequences out of 65536+600000
+ 65315 multiletter control sequences out of 65536+600000
  98 fonts using 10593295 bytes
  114i,22n,110p,1192b,1031s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvip
@@ -1744,10 +1744,10 @@ xmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (23 pages, 2621507 bytes).
+Output written on main.pdf (24 pages, 2615449 bytes).
 
-PDF statistics: 262 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 131072)
+PDF statistics: 266 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,0 +1,17 @@
+4
+Exactly two boxes have a statement that is false.
+The gems are in the white box.
+The gems are in the black box.
+---------------------------------------------------------------------------
+The statements on the empty boxes are both true.
+The statement on the box with the gems is false.
+Exactly one box has a statement that is true.
+---------------------------------------------------------------------------
+The gems are in the blue box.
+The gems are in the white box.
+The gems are in the black box.
+---------------------------------------------------------------------------
+The statement on the white box is true.
+The statement on the black box is true.
+The statement on the blue box is true.
+---------------------------------------------------------------------------

@@ -7,15 +7,15 @@
         "python3"
     ],
     "problems": [
-        "average",
-        "card-shufflers",
-        "elliptic-curve",
-        "inverse-pig-latin",
-        "poison-distribution",
-        "shape-rotators",
-        "silverbach",
-        "the-code-dna",
-        "the-code-rna"
+        "absolute-cinema",
+        "kabayos",
+        "light-game",
+        "love-game",
+        "mixed-messages",
+        "six-seven",
+        "tetris",
+        "the-parlor",
+        "the-rainbow"
     ],
     "site_password": "sinigangnababoynamayhalongmanok",
     "teams": "teams.json"

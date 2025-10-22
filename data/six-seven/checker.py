@@ -38,7 +38,7 @@ class Number(Evaluatable):
         if self.value in [6, 7]:
             return self.value
         else:
-            raise RuntimeError(f'Unallowed literal found: {self.value}')
+            raise EvaluateError(f'Unallowed literal found: {self.value}')
 
 @dataclass
 class Operator:
@@ -69,7 +69,7 @@ def sub(x: int, y: int):
 def dupe(x: int, y: int):
     if y == 0:
         raise EvaluateError(f'cannot have {x}*0')
-    if len(x) * y > 20:
+    if x != 0 and len(str(x)) * y > 20:
         raise EvaluateError(f'intermediate value of {x}*{y} is too large')
     else:
         return int(str(x) * y)
@@ -193,8 +193,12 @@ def process(line: str, i=0, is_root=True) -> tuple[Expression, int]:
         
         i += 1
 
+    # should have returned from nested expression due to ) not hit the end...
+    if not is_root:
+        raise ParseError(f'Unbalanced parentheses')
+
     if state == State.EXPECT_EXPRESSION:
-        raise ParseError(f'line ended unexpected, expected another expression')
+        raise ParseError(f'line ended unexpectedly, expected another expression')
 
     return expression, i
             

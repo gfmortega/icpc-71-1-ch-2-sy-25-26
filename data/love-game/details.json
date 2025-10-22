@@ -1,0 +1,24 @@
+{
+    "title": "Love Game",
+    "model_solution": "solution.py",
+    "validator": "validator.py",
+    "testscript": "testscript",
+    "generators": [
+        "gen_random.py"
+    ],
+    "other_programs": [
+        "formatter.py"
+    ],
+    "statement": "statement.md",
+
+    "comments": [
+        "You can place comments here. They will not be processed.",
+        "Leave valid_subtasks blank to make a binary problem.",
+        "If you need a custom checker, add the field: checker.",
+        "There are also a couple of builtin checkers.",
+        "For a custom checker template, see:",
+        "examples/templates/checker_generic_template.py"
+    ],
+    "time_limit": 2,
+    "version": "0.2"
+}
